@@ -1,0 +1,132 @@
+body{
+	width: 100%;
+	margin-top: 0;
+	margin-left: auto;
+	margin-right: auto;
+    color: #FFFFFF;
+	font-size: 16px;
+}
+
+p, td{
+	opacity: 0.7;
+}
+
+#header {
+	width: 100%;
+    background-color: #253149;
+	padding: 0 0 10px 0;
+	border-bottom-style: solid;
+	border-bottom-color: #000000;
+	border-bottom-width: thin;
+	margin-left: auto;
+	margin-right: auto;
+    margin-bottom: 0px;
+    display: block;
+	overflow: hidden;
+	z-index:10;
+	position: fixed;
+}
+
+#header a {
+	text-decoration: none;
+}
+
+#header a:hover {
+	color: #166088;
+}
+
+#navcontainer {
+	margin: 0 auto; 
+	display: block;
+	list-style-type: none;
+	width: 750px;
+    margin-bottom: 0px;
+	padding: 0;
+	text-align: center;
+}
+
+#navcontainer li{
+	display: inline;  
+	margin-right: 40px;
+	font-size: 36px;
+	text-align: left;
+}
+
+#profile {
+	height: 425px;
+	background-color: #4167A6;
+	padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+	border-bottom-style: solid;
+	border-bottom-color: #FFFFFF;
+}
+
+#prof_container {
+	margin: 0 auto;
+	padding-top: 70px;
+	width: 800px;
+	display: block;
+}
+
+#profile h1 {
+	position: relative;
+	margin-right: 0px;
+    text-align: left;
+	padding-bottom: 0px;
+}
+
+#profile p {
+	position: relative;
+	padding: 0px;
+    margin: 0 auto;
+    width: 700px;
+	text-align: justify;
+}
+
+#profile_pic {
+    float:left;
+    margin-right: 30px;
+    border-radius: 10%;
+    height: 300px;
+    width: 300px;
+	opacity: 1.0;
+}
+
+.icon {
+    background-color: #FFFFFF;
+    height: 50px;
+    width: 50px;
+    display: inline;
+    margin-right: 10px;
+    border-style: solid;
+    border-color: #FFFFFF;
+    border-width: 3px;
+	opacity: 1.0;
+}
+
+#education {
+	border-top: 2px;
+	background-color: #3F8EB3;
+	padding-top: 25px;
+	font-size: 18px;
+}
+#education h1, h2 {
+	text-align: center;
+	position:relative;
+	left:50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+}
+ 
+ #education table {
+	position:relative;
+	left:50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	border-collapse: separate;
+  border-spacing: 300px 20px;
+ }
+ 
+
+
