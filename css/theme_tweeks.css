@@ -85,7 +85,8 @@ li {
 }
 
 .card {
-    width: 400px;
+    width: 100%;
+	max-width: 500px;
     box-shadow: 3px 5px 20px 3px #555555;
     text-align: center;
     border-radius: 25px 25px 25px 25px;
