@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -31,6 +31,18 @@
             margin: 0 0 10px 0;
         }
     </style>
+    <script src="js/helper.js"></script>
+    <script>
+        window.onload = function() {
+            cards = document.getElementsByClassName("card");
+            equalizeHeight(cards);
+        }
+
+        window.onresize = function() {
+            cards = document.getElementsByClassName("card");
+            equalizeHeight(cards);
+        }
+    </script>
 </head>
 <body>
     <!-- Navbar -->
@@ -65,22 +77,38 @@
 		<!-- Cards -->
         <div class="row">
 
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <a href="apps/overwatch_counters/app.html">
                     <div onmouseover="enlargeCard(this)" onmouseout="shrinkCard(this)" class="card">
                         <h4>Overwatch Counter Guide</h4>
                         <img src="images/overwatch_counters.png" class="card-img" />
-                        <p class="description">Quick hero-counter guide aimed to help players compete in Blizzard Entertainment's team-based first-person shooter video game.</p>
+                        <p class="description">Useful quick hero-counter guide aimed to help players compete in Blizzard Entertainment's team-based first-person shooter video game. Counters by PCGamer.com</p>
                     </div>
                 </a>
             </div>
 
-            <div class="col-sm-6">
+            <div class="col-sm-4">
+                <a href="apps/logic_text_converter/app.html">
+                    <div class="card">
+                        <h4>Logical Text Converter</h4>
+                        <img src="images/Logic_Converter.png" class="card-img" />
+                        <p class="description">For anyone
+                            in CSE 311 that wants to be able
+                            to type up their homework but is too 
+                            lazy to learn Latex, this app will
+                            allow you to convert plain text into
+                            logical symbols.
+                        </p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-sm-4">
                 <a href="apps/article_summarizer/app.html">
                     <div class="card">
                         <h4>Article Summarizer</h4>
                         <img src="images/article_summarizer.png" class="card-img" />
-                        <p class="description">Inspired by SMMRY.com, Article Summarizer can take in the text of an article and help shorten it to its most important sentences.</p>
+                        <p class="description">Inspired by SMMRY.com, Article Summarizer can take in the text of an article and help shorten it to its most important sentences to convey the gist of the article.</p>
                     </div>
                 </a>
             </div>
