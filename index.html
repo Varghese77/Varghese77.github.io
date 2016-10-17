@@ -39,14 +39,19 @@
     </style>
     <script src="js/helper.js"></script>
     <script>
-        window.onload = function() {
-            descrs = document.getElementsByClassName("descr");
-            equalizeHeight(descrs);
-        }
+        var descrs = document.getElementsByClassName("descr");
+        
+        window.onload = reScale;
 
-        window.onresize = function() {
-            escrs = document.getElementsByClassName("descr");
-            equalizeHeight(descrs);
+        window.onresize = reScale;
+        
+        function reScale() {
+            for (i = 0; i < descrs.length; i++){
+                descrs[i].style.height = "100%";
+            }
+            if (document.body.offsetWidth > 691) {
+                equalizeHeight(descrs);
+            }
         }
     </script>
 </head>

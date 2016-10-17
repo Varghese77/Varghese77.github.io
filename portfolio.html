@@ -33,13 +33,16 @@
     </style>
     <script src="js/helper.js"></script>
     <script>
-        window.onload = function() {
-            cards = document.getElementsByClassName("card");
-            equalizeHeight(cards);
-        }
+        var cards = document.getElementsByClassName("card");
+        
+        window.onload = reSize;
 
-        window.onresize = function() {
-            cards = document.getElementsByClassName("card");
+        window.onresize = reSize;
+        
+        function reSize() {
+            for (i = 0; i < cards.length; i++){
+                cards[i].style.height = "100%";
+            }
             equalizeHeight(cards);
         }
     </script>
