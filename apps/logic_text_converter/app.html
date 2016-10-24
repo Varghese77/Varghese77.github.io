@@ -43,6 +43,9 @@
             .form-group {
                 margin-bottom: 50px;
             }
+            button {
+                width: 50%;
+            }
         </style>
     </head>
     <body>
@@ -69,12 +72,19 @@
         <!-- App -->
         <div class="form-group container">
             <h1>Logic Text Converter</h1>
-            <p><a href = "readme.html">README!</a></p>
+            <br/>
             <textarea class="form-control" rows="20" id="textInput" input type="text" 
                 placeholder="Type Raw Text Here"></textarea>
+            <br/>
             <div class = "row">
                 <div class="col-xs-12">
-                    <button type="button" class="btn btn-default btn-block btn-lg" id="convert" onclick = "onClick()">Convert!</button>
+                    <button type="button" class="btn btn-default btn-block btn-lg" id="convert" onclick = "convert()">Convert!</button>
+                </div>
+            </div>
+            <div class = "row">
+                <div class="col-xs-12 btn-group">
+                    <button type="button" class="btn btn-default btn-inline btn-lg" id="convert" onclick = "removeSlashes()">Remove "\"s!</button>
+                    <button onclick="location.href='readme.html';" type="button" class="btn btn-default btn-inline btn-lg">README!</button>
                 </div>
             </div>
         </div>
