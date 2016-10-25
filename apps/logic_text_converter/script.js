@@ -108,7 +108,6 @@ function InputText() {
         rawText = rawText.replace(/<_>/g, "↔");
         rawText = rawText.replace(/->/g, "→");
         rawText = rawText.replace(/:=/g, "≡");
-        rawText = rawText.replace(/-/g, "¬");
         rawText = rawText.replace(/not /g, "¬");
         rawText = rawText.replace(/not/g, "¬");
         rawText = rawText.replace(/and/g, "∧");
