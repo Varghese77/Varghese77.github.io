@@ -147,7 +147,7 @@ document.addEventListener("keydown", function(evt) {
     } else if (evt.keyCode==89 && (evt.ctrlKey)) {
         evt.preventDefault();
         textBox.forward();
-    } else if (evt.keyCode==84 && (evt.ctrlKey)) {
+    } else if (evt.keyCode==84 && (evt.altKey)) {
         evt.preventDefault();
         textBox.convert();
     }
