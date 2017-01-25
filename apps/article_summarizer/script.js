@@ -18,22 +18,23 @@ var abrevs = ["mr.", "ms.", "mrs.", "dr.", "fr.", "sr.", "m.d.", "u.s.", "u.k.",
 var wordCount;
 
 
-// Node object is a wraper for all information relating to each body sentence that can also 
+// Node object is a wrapper for all information relating to each body sentence that can also
 // link to other Nodes.
 function Node(sentence) {
 	this.sentence = sentence;  // Sentence text
 	this.score;                // Total score of the sentence
 	this.sentenceNumber;       // Sentence chronological placement
-	this.next;                 // Next Node link
+
+	this.next;                 // Next Node in the List
 }
 
-// LinkedList object is a linkedlist that stores a maximum of <max> Nodes. It will store the 
+// Heap object is a Linked List that stores a maximum of <max> Nodes. It will store the
 // top <max> Nodes that this list receives in increasing order. 
-function LinkedList(max) {
-	this.front;                // First Node in list, minimum of top <max> Nodes list receives
+function Heap(max) {
+	this.front;
 	this.max = max;            // Maximum number of Nodes that this list will store at a time.
 	this.size = 0;             // Number of Nodes currently in list
-	
+
 	// Pre: <node> must have a valid score. It is recommended to have an nonempty sentence field 
 	// and valid sentence number
 	// 
@@ -64,8 +65,7 @@ function LinkedList(max) {
 	// Pre: <node> should have a score that is greater than this.front.score. 
 	// 
 	// This method takes in <node> and places it into the appropriate location 
-	// in the list based on increasing order. Method will not unlink any Nodes in 
-	// the list. 
+	// in the list based on increasing order.
 	this.insertNode = function(node) {
 		var p1 = this.front;
 		var p2 = this.front.next;
@@ -80,6 +80,9 @@ function LinkedList(max) {
 	// Returns the Nodes in list into a sorted Array based on increasing 
 	// order of the sentenceNumber field
 	this.getSortedArray = function() {
+
+
+
 		var arr = []; 
 		var curr = this.front;
 		while (curr != undefined) {
@@ -99,9 +102,9 @@ function onClick(){
 	var max = parseInt(document.getElementById("number_input").value);
 	wordCount = [];
 	var textBox = document.getElementById("article");
-	var articleText = textBox.value
+	var articleText = textBox.value;
 	var paragraphs = articleText.split("\n");
-	var body = ""
+	var body = "";
 	for (i = 0; i < paragraphs.length; i++){
 		body += paragraphs[i] + " ";
 	}
@@ -110,7 +113,7 @@ function onClick(){
 	// Updates wordCount Associative Array where wordCount[word] = score. 
 	bodyWords = updateWordCount(bodyWords);
 	
-	// Creates LinkedList of top <max> body sentences based on the score field
+	// Creates Heap of top <max> body sentences based on the score field
 	var list = getSentenceList(bodyWords, max);
 	
 	// Gets Sorted Array of Nodes in <list> based on the SentenceNumber field
@@ -135,19 +138,19 @@ function onClick(){
 // seen yet with a score of one or increments the score in <wordCount> if the string is a 
 // repeat. 
 function updateWordCount(words){
-	for (i = 0; i < words.length; i++) {
+	for (var i = 0; i < words.length; i++) {
 		word = words[i].toLowerCase();
-		
+
 		if ((word.endsWith(".") || (word.endsWith("!"))) && !checkForAbrev(word)){
 			word = word.substring(0, word.length - 1);
 			// "$~$" indicates the end of a sentence now that the period is removed.
 			words[i] = words[i].substring(0, words[i].length - 1) + "$~$";
 		}
-		
+
 		word = stripWord(word);
-		
-		// word key is stored with a ":" concatonated on because some words might invoke 
-		// global functions. 
+
+		// word key is stored with a ":" concatonated on because some words might invoke
+		// global functions.
 		if(wordCount[":" + word] == undefined) {
 			wordCount[":" + word] = 1;
 		} else {
@@ -159,13 +162,13 @@ function updateWordCount(words){
 
 // Pre: bodywords must not be undefined and max must be greater than 0
 //
-// Returns a LinkedList that stores up to <max> of top body sentences based on total 
+// Returns a Linked List that stores up to <max> of top body sentences based on total
 // score.
 function getSentenceList(bodyWords, max) {
 	var sentence = "";
 	var sentenceNumber = 0;
 	var score = 0;
-	var list = new LinkedList(max);
+	var list = new Heap(max);
 	for (i = 0; i < bodyWords.length; i++) {
 		word = bodyWords[i].toLowerCase();
 		word = stripWord(word);
@@ -178,7 +181,7 @@ function getSentenceList(bodyWords, max) {
 			sentence += bodyWords[i];
 			score += wordCount[":" + word];
 			
-			// Adds node to LinkedList list
+			// Adds node to Heap list
 			var node = new Node(sentence);
 			node.score = score;
 			node.sentenceNumber = sentenceNumber;
@@ -187,7 +190,7 @@ function getSentenceList(bodyWords, max) {
 			sentence = "";
 			score = 0;
 		} else {
-			sentence += bodyWords[i] + " "
+			sentence += bodyWords[i] + " ";
 			score += wordCount[":" + word];
 		}
 	}

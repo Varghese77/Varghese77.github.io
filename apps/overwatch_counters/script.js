@@ -10,6 +10,7 @@ function initializeCounters() {
     countersMap["genji"] = new Array("winston", "mei", "zarya");
     countersMap["mccree"] = new Array("widowmaker", "genji", "soldier76");
     countersMap["pharah"] = new Array("mccree", "roadhog", "soldier76");
+    countersMap["sombra"] = new Array("phara", "winston", "symmetra");
     countersMap["reaper"] = new Array("junkrat", "mccree", "pharah");
     countersMap["soldier76"] = new Array("mei", "reinhardt", "genji");
     countersMap["tracer"] = new Array("mccree", "mei", "soldier76");
