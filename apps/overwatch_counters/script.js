@@ -1,31 +1,59 @@
+// Stores counter hero and description information of heros
 var hero_data;
 
-function loadJSON(addr) {   
+// Gets JSON data from address addr and loads it into obj
+function loadJSON(addr) { 
+		var jsonData;
+
     var xobj = new XMLHttpRequest();
-    xobj.overrideMimeType("application/json");
+    xobj.overrideMimeType('application/json');
     xobj.open('GET', addr, true);
     xobj.onreadystatechange = function () {
-          if (xobj.readyState == 4 && xobj.status == "200") {
-            hero_data = JSON.parse(xobj.responseText);
+          if (xobj.readyState == 4 && xobj.status == '200') {
+            jsonData = JSON.parse(xobj.responseText);
           }
     };
-    xobj.send(null);  
+    xobj.send(null);
+		return jsonData;
 }
 
-loadJSON("https://varghese77.github.io/apps/overwatch_counters/hero_data.json");
+// loads hero data if needed
+var stored = localStorage['hero_data'];
+if (stored) {
+	hero_data = JSON.parse(stored);
+} else {
+	hero_data = loadJSON('https://varghese77.github.io/apps/overwatch_counters/hero_data.json');
+	localStorage['hero_data'] = JSON.stringify(hero_data);
+}
 
 // Array of hero icon buttons in the HTML document
 var heros = document.getElementsByClassName('hero');
 
+// Gets hero description paragraph element. Note that getElementByID doesn't
+// work in firefox for the nested paragraph
 var heroDescriptionParagraph = document.getElementsByClassName('hero_descr_text');
 
+// Highlights selected and counter heros and loads description
 function heroClick(clickedId){
 	var counters = hero_data[clickedId].counters;
 	
+	// itereates through icon imgs
 	for (var i = 0; i < heros.length; i++){
 		var heroId = heros[i].id;
 		var hero = heros[i];
-		
+
+		// iterates though specific hero counters (guarenteed to be
+		// less than 10)
+		function isCounter(heroName, heroCounters) {
+			for (var k = 0; k < heroCounters.length; k++){
+				if (heroCounters[k] == heroName){
+					return true;
+				}
+			}
+			return false;
+		}
+
+		// stylize icons	
 		var isCounterHero = isCounter(heroId, counters);
 		if (isCounterHero || clickedId == heroId){
 			hero.style.opacity = '1.0';
@@ -44,14 +72,7 @@ function heroClick(clickedId){
 			hero.style.border = 'none';
 		}
 	}
-    heroDescriptionParagraph[0].innerText = hero_data[clickedId].description;
-}
 
-function isCounter(heroName, heroCounters){
-	for (var k = 0; k < heroCounters.length; k++){
-		if (heroCounters[k] == heroName){
-			return true;
-		}
-	}
-	return false;
+	// load hero description
+  heroDescriptionParagraph[0].innerText = hero_data[clickedId].description;
 }

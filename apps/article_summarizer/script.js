@@ -80,9 +80,6 @@ function Heap(max) {
 	// Returns the Nodes in list into a sorted Array based on increasing 
 	// order of the sentenceNumber field
 	this.getSortedArray = function() {
-
-
-
 		var arr = []; 
 		var curr = this.front;
 		while (curr != undefined) {
