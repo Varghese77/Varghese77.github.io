@@ -1,50 +1,30 @@
+var hero_data;
 
-// Associative array that links a hero to an array of its counters
-var countersMap = initializeCounters();
-
-var heros = document.getElementsByClassName('hero');
-
-// Returns new Associative Array with hero counter data
-function initializeCounters() {
-    var countersMap = [];
-    
-    // Adds counter data
-    countersMap['genji'] = new Array('winston', 'mei', 'zarya');
-    countersMap['mccree'] = new Array('widowmaker', 'genji', 'soldier76');
-    countersMap['pharah'] = new Array('mccree', 'roadhog', 'soldier76');
-    countersMap['sombra'] = new Array('phara', 'winston', 'symmetra');
-    countersMap['reaper'] = new Array('junkrat', 'mccree', 'pharah');
-    countersMap['soldier76'] = new Array('mei', 'reinhardt', 'genji');
-    countersMap['tracer'] = new Array('mccree', 'mei', 'soldier76');
-    countersMap['reaper'] = new Array('mccree', 'pharah', 'junkrat');
-    countersMap['bastion'] = new Array('genji', 'tracer', 'widowmaker');
-    countersMap['ana'] = new Array('genji', 'reaper', 'tracer');
-    countersMap['dva'] = new Array('mei', 'symmetra', 'zenyatta');
-    countersMap['hanzo'] = new Array('dva', 'tracer', 'widowmaker');
-    countersMap['junkrat'] = new Array('widowmaker', 'mccree', 'pharah');
-    countersMap['lucio'] = new Array('mei', 'mccree', 'pharah');
-    countersMap['mccree'] = new Array('genji', 'widowmaker', 'soldier76');
-    countersMap['mei'] = new Array('widowmaker', 'pharah', 'junkrat');
-    countersMap['mercy'] = new Array('mccree', 'tracer', 'widowmaker');
-    countersMap['reinhardt'] = new Array('reaper', 'winston', 'pharah');
-    countersMap['roadhog'] = new Array('reaper', 'dva', 'genji');
-    countersMap['symmetra'] = new Array('junkrat', 'pharah', 'winston');
-    countersMap['torbjorn'] = new Array('junkrat', 'widowmaker', 'pharah');
-    countersMap['widowmaker'] = new Array('dva', 'genji', 'winston');
-    countersMap['winston'] = new Array('reaper', 'mei', 'mccree');
-    countersMap['zarya'] = new Array('roadhog', 'pharah', 'reaper');
-    countersMap['zenyatta'] = new Array('hanzo', 'tracer', 'widowmaker');
-    countersMap['orisa'] = new Array('tracer', 'roadhog', 'sombra');
-    
-    return countersMap;
+function loadJSON(addr) {   
+    var xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("application/json");
+    xobj.open('GET', addr, true);
+    xobj.onreadystatechange = function () {
+          if (xobj.readyState == 4 && xobj.status == "200") {
+            hero_data = JSON.parse(xobj.responseText);
+          }
+    };
+    xobj.send(null);  
 }
 
+loadJSON("https://varghese77.github.io/apps/overwatch_counters/hero_data.json");
+
+// Array of hero icon buttons in the HTML document
+var heros = document.getElementsByClassName('hero');
+
+var heroDescriptionParagraph = document.getElementsByClassName('hero_descr_text');
+
 function heroClick(clickedId){
-	var counters = countersMap[clickedId];
+	var counters = hero_data[clickedId].counters;
 	
 	for (var i = 0; i < heros.length; i++){
 		var heroId = heros[i].id;
-		var hero = document.getElementById(heroId);
+		var hero = heros[i];
 		
 		var isCounterHero = isCounter(heroId, counters);
 		if (isCounterHero || clickedId == heroId){
@@ -64,6 +44,7 @@ function heroClick(clickedId){
 			hero.style.border = 'none';
 		}
 	}
+    heroDescriptionParagraph[0].innerText = hero_data[clickedId].description;
 }
 
 function isCounter(heroName, heroCounters){

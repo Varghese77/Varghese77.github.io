@@ -5,7 +5,7 @@
       "mei",
       "zarya"
     ],
-    "description" : "HERE"
+    "description" : "Genji flings precise and deadly Shuriken at his targets, and uses his technologically-advanced katana to deflect projectiles or deliver a Swift Strike that cuts down enemies."
   },
   "mccree" : {
     "counters": [
@@ -13,7 +13,7 @@
       "genji",
       "soldier76"
     ],
-    "description" : "HERE"
+    "description" : "Armed with his Peacekeeper revolver, McCree takes out targets with deadeye precision and dives out of danger with eagle-like speed."
   },
   "pharah" : {
     "counters": [
@@ -21,7 +21,7 @@
       "roadhog",
       "soldier76"
     ],
-    "description" : "HERE"
+    "description" : "Soaring through the air in her combat armor, and armed with a launcher that lays down high-explosive rockets, Pharah is a force to be reckoned with."
   },
   "sombra" : {
     "counters": [
@@ -29,7 +29,7 @@
       "winston",
       "symmetra"
     ],
-    "description" : "HERE"
+    "description" : "Stealth and debilitating attacks make Sombra a powerful infiltrator. Her hacking can disrupt her enemies, ensuring they're easier to take out, while her EMP provides the upper hand against multiple foes at once. Sombra’s ability to Translocate and camouflage herself makes her a hard target to pin down."
   },
   "reaper" : {
     "counters": [
@@ -37,7 +37,7 @@
       "mccree",
       "pharah"
     ],
-    "description" : "HERE"
+    "description" : "Hellfire Shotguns, the ghostly ability to become immune to damage, and the power to step between shadows make Reaper one of the deadliest beings on Earth."
   },
   "soldier76" : {
     "counters": [
@@ -45,7 +45,7 @@
       "reinhardt",
       "genji"
     ],
-    "description" : "HERE"
+    "description" : "Armed with cutting-edge weaponry, including an experimental pulse rifle that’s capable of firing spirals of high-powered Helix Rockets, Soldier: 76 has the speed and support know-how of a highly trained warrior."
   },
   "tracer" : {
     "counters": [
@@ -53,15 +53,7 @@
       "mei",
       "soldier76"
     ],
-    "description" : "HERE"
-  },
-  "reaper" : {
-    "counters": [
-      "mccree",
-      "pharah",
-      "junkrat"
-    ],
-    "description" : "HERE"
+    "description" : "Toting twin pulse pistols, energy-based time bombs, and rapid-fire banter, Tracer is able to \"blink\" through space and rewind her personal timeline as she battles to right wrongs the world over."
   },
   "bastion" : {
     "counters": [
@@ -69,7 +61,7 @@
       "tracer",
       "widowmaker"
     ],
-    "description" : "HERE"
+    "description" : "Repair protocols and the ability to transform between stationary Assault, mobile Recon and devastating Tank configurations provide Bastion with a high probability of victory."
   },
   "ana" : {
     "counters": [
@@ -77,7 +69,7 @@
       "reaper",
       "tracer"
     ],
-    "description" : "HERE"
+    "description" : "Ana’s versatile arsenal allows her to affect heroes all over the battlefield. Her Biotic Rifle rounds and Biotic Grenades heal allies and damage or impair enemies; her sidearm tranquilizes key targets, and Nano Boost gives one of her comrades a considerable increase in power."
   },
   "dva" : {
     "counters": [
@@ -85,7 +77,7 @@
       "symmetra",
       "zenyatta"
     ],
-    "description" : "HERE"
+    "description" : "D.Va’s mech is nimble and powerful—its twin Fusion Cannons blast away with autofire at short range, and she can use its Boosters to barrel over enemies and obstacles, or deflect attacks with her projectile-dismantling Defense Matrix."
   },
   "hanzo" : {
     "counters": [
@@ -93,7 +85,7 @@
       "tracer",
       "widowmaker"
     ],
-    "description" : "HERE"
+    "description" : "Hanzo’s versatile arrows can reveal his enemies or fragment to strike multiple targets. He can scale walls to fire his bow from on high, or summon a titanic spirit dragon."
   },
   "junkrat" : {
     "counters": [
@@ -101,7 +93,7 @@
       "mccree",
       "pharah"
     ],
-    "description" : "HERE"
+    "description" : "Junkrat’s area-denying armaments include a Frag Launcher that lobs bouncing grenades, Concussion Mines that send enemies flying, and Steel Traps that stop foes dead in their tracks."
   },
   "lucio" : {
     "counters": [
@@ -109,15 +101,7 @@
       "mccree",
       "pharah"
     ],
-    "description" : "HERE"
-  },
-  "mccree" : {
-    "counters": [
-      "genji",
-      "widowmaker",
-      "soldier76"
-    ],
-    "description" : "HERE"
+    "description" : "On the battlefield, Lúcio’s cutting-edge Sonic Amplifier buffets enemies with projectiles and knocks foes back with blasts of sound. His songs can both heal his team or boost their movement speed, and he can switch between tracks on the fly."
   },
   "mei" : {
     "counters": [
@@ -125,7 +109,7 @@
       "pharah",
       "junkrat"
     ],
-    "description" : "HERE"
+    "description" : "Mei’s weather-altering devices slow opponents and protect locations. Her Endothermic Blaster unleashes damaging icicles and frost streams, and she can Cryo-Freeze herself to guard against counterattacks, or obstruct the opposing team's movements with an Ice Wall."
   },
   "mercy" : {
     "counters": [
@@ -133,7 +117,7 @@
       "tracer",
       "widowmaker"
     ],
-    "description" : "HERE"
+    "description" : "Mercy’s Valkyrie Suit helps keep her close to teammates like a guardian angel; healing, resurrecting or strengthening them with the beams emanating from her Caduceus Staff."
   },
   "reinhardt" : {
     "counters": [
@@ -141,7 +125,7 @@
       "winston",
       "pharah"
     ],
-    "description" : "HERE"
+    "description" : "Clad in powered armor and swinging his hammer, Reinhardt leads a rocket-propelled charge across the battleground and defends his squadmates with a massive energy barrier."
   },
   "roadhog" : {
     "counters": [
@@ -149,7 +133,7 @@
       "dva",
       "genji"
     ],
-    "description" : "HERE"
+    "description" : "Roadhog uses his signature Chain Hook to pull his enemies close before shredding them with blasts from his Scrap Gun. He’s hardy enough to withstand tremendous damage, and can recover his health with a short breather."
   },
   "symmetra" : {
     "counters": [
@@ -157,7 +141,7 @@
       "pharah",
       "winston"
     ],
-    "description" : "HERE"
+    "description" : "HESymmetra utilizes her light-bending Photon Projector to dispatch adversaries, shield her associates, construct teleportation pads and deploy particle-blasting Sentry Turrets.RE"
   },
   "torbjorn" : {
     "counters": [
@@ -165,7 +149,7 @@
       "widowmaker",
       "pharah"
     ],
-    "description" : "HERE"
+    "description" : "orbjörn’s extensive arsenal includes a rivet gun and hammer, as well as a personal forge that he can use to build upgradeable turrets and dole out protective armor packs."
   },
   "widowmaker" : {
     "counters": [
@@ -173,7 +157,7 @@
       "genji",
       "winston"
     ],
-    "description" : "HERE"
+    "description" : "Widowmaker equips herself with whatever it takes to eliminate her targets, including mines that dispense poisonous gas, a visor that grants her squad infra-sight, and a powerful sniper rifle that can fire in fully-automatic mode."
   },
   "winston" : {
     "counters": [
@@ -181,7 +165,7 @@
       "mei",
       "mccree"
     ],
-    "description" : "HERE"
+    "description" : "Winston wields impressive inventions—a jump pack, electricity-blasting Tesla Cannon, portable shield projector and more—with literal gorilla strength."
   },
   "zarya" : {
     "counters": [
@@ -189,7 +173,7 @@
       "pharah",
       "reaper"
     ],
-    "description" : "HERE"
+    "description" : "Deploying powerful personal barriers that convert incoming damage into energy for her massive Particle Cannon, Zarya is an invaluable asset on the front lines of any battle."
   },
   "zenyatta" : {
     "counters": [
@@ -197,7 +181,7 @@
       "tracer",
       "widowmaker"
     ],
-    "description" : "HERE"
+    "description" : "Zenyatta calls upon orbs of harmony and discord to heal his teammates and weaken his opponents, all while pursuing a transcendent state of immunity to damage."
   },
   "orisa" : {
     "counters": [
@@ -205,6 +189,6 @@
       "roadhog",
       "sombra"
     ],
-    "description" : "HERE"
+    "description" : "Orisa serves as the central anchor of her team, and defends her teammates from the frontline with a protective barrier. She can attack from long range, fortify her own defenses, launch graviton charges to slow and move enemies, and deploy a Supercharger to boost the damage output of multiple allies at once."
   }
 }
