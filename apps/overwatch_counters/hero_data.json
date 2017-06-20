@@ -1,0 +1,210 @@
+{
+  "genji" : {
+    "counters": [
+      "winston",
+      "mei",
+      "zarya"
+    ],
+    "description" : "HERE"
+  },
+  "mccree" : {
+    "counters": [
+      "widowmaker",
+      "genji",
+      "soldier76"
+    ],
+    "description" : "HERE"
+  },
+  "pharah" : {
+    "counters": [
+      "mccree",
+      "roadhog",
+      "soldier76"
+    ],
+    "description" : "HERE"
+  },
+  "sombra" : {
+    "counters": [
+      "phara",
+      "winston",
+      "symmetra"
+    ],
+    "description" : "HERE"
+  },
+  "reaper" : {
+    "counters": [
+      "junkrat",
+      "mccree",
+      "pharah"
+    ],
+    "description" : "HERE"
+  },
+  "soldier76" : {
+    "counters": [
+      "mei",
+      "reinhardt",
+      "genji"
+    ],
+    "description" : "HERE"
+  },
+  "tracer" : {
+    "counters": [
+      "mccree",
+      "mei",
+      "soldier76"
+    ],
+    "description" : "HERE"
+  },
+  "reaper" : {
+    "counters": [
+      "mccree",
+      "pharah",
+      "junkrat"
+    ],
+    "description" : "HERE"
+  },
+  "bastion" : {
+    "counters": [
+      "genji",
+      "tracer",
+      "widowmaker"
+    ],
+    "description" : "HERE"
+  },
+  "ana" : {
+    "counters": [
+      "genji",
+      "reaper",
+      "tracer"
+    ],
+    "description" : "HERE"
+  },
+  "dva" : {
+    "counters": [
+      "mei",
+      "symmetra",
+      "zenyatta"
+    ],
+    "description" : "HERE"
+  },
+  "hanzo" : {
+    "counters": [
+      "dva",
+      "tracer",
+      "widowmaker"
+    ],
+    "description" : "HERE"
+  },
+  "junkrat" : {
+    "counters": [
+      "widowmaker",
+      "mccree",
+      "pharah"
+    ],
+    "description" : "HERE"
+  },
+  "lucio" : {
+    "counters": [
+      "mei",
+      "mccree",
+      "pharah"
+    ],
+    "description" : "HERE"
+  },
+  "mccree" : {
+    "counters": [
+      "genji",
+      "widowmaker",
+      "soldier76"
+    ],
+    "description" : "HERE"
+  },
+  "mei" : {
+    "counters": [
+      "widowmaker",
+      "pharah",
+      "junkrat"
+    ],
+    "description" : "HERE"
+  },
+  "mercy" : {
+    "counters": [
+      "mccree",
+      "tracer",
+      "widowmaker"
+    ],
+    "description" : "HERE"
+  },
+  "reinhardt" : {
+    "counters": [
+      "reaper",
+      "winston",
+      "pharah"
+    ],
+    "description" : "HERE"
+  },
+  "roadhog" : {
+    "counters": [
+      "reaper",
+      "dva",
+      "genji"
+    ],
+    "description" : "HERE"
+  },
+  "symmetra" : {
+    "counters": [
+      "junkrat",
+      "pharah",
+      "winston"
+    ],
+    "description" : "HERE"
+  },
+  "torbjorn" : {
+    "counters": [
+      "junkrat",
+      "widowmaker",
+      "pharah"
+    ],
+    "description" : "HERE"
+  },
+  "widowmaker" : {
+    "counters": [
+      "dva",
+      "genji",
+      "winston"
+    ],
+    "description" : "HERE"
+  },
+  "winston" : {
+    "counters": [
+      "reaper",
+      "mei",
+      "mccree"
+    ],
+    "description" : "HERE"
+  },
+  "zarya" : {
+    "counters": [
+      "roadhog",
+      "pharah",
+      "reaper"
+    ],
+    "description" : "HERE"
+  },
+  "zenyatta" : {
+    "counters": [
+      "hanzo",
+      "tracer",
+      "widowmaker"
+    ],
+    "description" : "HERE"
+  },
+  "orisa" : {
+    "counters": [
+      "tracer",
+      "roadhog",
+      "sombra"
+    ],
+    "description" : "HERE"
+  }
+}
